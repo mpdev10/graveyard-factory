@@ -212,7 +212,7 @@ export default {
   'count.zombies.other': '{n} zombies',
   // Placement and validation messages
   'place.outside': 'Outside the layout',
-  'place.frontOfDist': 'In front of {dist} only a belt or an underground\'s belt cell can go, not pointing into it',
+  'place.frontOfDist': 'In front of {dist} only a belt, an underground\'s belt cell (not pointing into it) or an underground\'s gap can go',
   'place.gapOffFloor': 'Gap is off the factory floor',
   'place.gapOnlyBelt': 'Only a belt, chest or underground can sit on the gap, not {what}',
   'place.gapOverlap': 'Gap overlaps the gap of {what}',
@@ -238,7 +238,7 @@ export default {
   'issue.unknownRecipe': '{what}: unknown recipe "{id}"',
   'issue.cantRunRecipe': '{what} cannot run recipe "{id}"',
   'issue.needsExtension': '{what} needs the {name} extension for its recipe',
-  'issue.frontOfDist': '{what} can\'t be in front of {dist}: only a belt or an underground\'s belt cell can go there, not pointing into it',
+  'issue.frontOfDist': '{what} can\'t be in front of {dist}: only a belt, an underground\'s belt cell (not pointing into it) or an underground\'s gap can go there',
   'issue.supplyIntoChest': '{what} can\'t take "Supply: …" items, but a belt carries them into it',
   'issue.porters': '{stations} need {porters}, one for every 3; {placed} placed',
   'issue.power': 'Power {used} is over the factory\'s {available} ({maxZombies} zombies on {carousels} carousels): {over} too many',
