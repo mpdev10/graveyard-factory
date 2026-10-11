@@ -699,13 +699,13 @@ function normalizeEntity(e) {
   return e;
 }
 
-// May cell `i` of entity `e` sit in front of a distributor? Only a belt or an
-// underground's belt cell (not its gap), not pointing back into it
-// (DISTRIBUTOR_FRONT_KINDS).
+// May cell `i` of entity `e` sit in front of a distributor? A belt or an
+// underground's belt cell, not pointing back into it (DISTRIBUTOR_FRONT_KINDS),
+// or an underground's gap, which only passes below and takes nothing.
 /** @param {EntitySpec} e @param {number} i @param {Dir} back */
 function fitsFront(e, i, back) {
-  if (!DISTRIBUTOR_FRONT_KINDS.includes(e.kind) || e.rot === back) return false;
-  return !entityCells(e)[i].gap;
+  if (entityCells(e)[i].gap) return e.kind === 'underground';
+  return DISTRIBUTOR_FRONT_KINDS.includes(e.kind) && e.rot !== back;
 }
 
 /**

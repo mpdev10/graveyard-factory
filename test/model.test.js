@@ -362,7 +362,10 @@ test('in front of a distributor: empty, a belt or an underground belt cell, not 
   assert.equal(ok({ kind: 'splitter', rot: N }), false);
   assert.equal(ok({ kind: 'supply_station', rot: N }), false);
   assert.equal(l.canPlace({ kind: 'station', type: 'smithy', level: 1, x: 10, y: 50 }).ok, false); // covers it
-  assert.equal(l.canPlace({ kind: 'underground', x: 9, y: 52, rot: E }).ok, false); // gap over it
+  assert.equal(l.canPlace({ kind: 'underground', x: 9, y: 52, rot: E }).ok, true); // gap over it: it only passes below
+  const g = l.add({ kind: 'underground', x: 9, y: 52, rot: E });
+  assert.deepEqual(l.validate().filter((i) => i.severity !== 'info'), []);
+  l.remove(g.id);
   assert.equal(l.canPlace({ kind: 'underground', x: 10, y: 52, rot: E }).ok, true); // a belt cell over it
   // The distributor feeds that cell like a chest feeds a belt.
   const u = l.add({ kind: 'underground', x: 10, y: 52, rot: E });

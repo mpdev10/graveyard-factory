@@ -340,7 +340,7 @@ export class RouteGrid {
     for (let i = 0; i < UNDERGROUND_LENGTH; i++) {
       const c = this.step(k, d, i);
       if (c < 0 || !this.floor[c]) return false;
-      if (i > 0 && this.distFront[c] !== -1) return false; // only its entry goes in front of a distributor
+      if (i > 0 && i !== UNDERGROUND_GAP && this.distFront[c] !== -1) return false; // only its entry and its gap go in front of a distributor
       if (i === UNDERGROUND_GAP) {
         if (this.gap[c] !== -1 || this.reserved[c] !== -1) return false;
         // The gap can pass under a crossing belt or a chest. Undergrounds may
