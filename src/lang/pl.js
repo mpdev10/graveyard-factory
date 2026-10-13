@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': 'Część fabryki: nie można go przesunąć, obrócić ani usunąć. Pole, które zasila, może zostać puste albo przyjąć taśmę lub pole taśmy przenośnika podziemnego (nie jego lukę), niebiegnące z powrotem do niego.',
   'inspector.lockedTitle': 'Planer zostawia zablokowane elementy na miejscu',
   'inspector.keepInPlanner': 'zachowaj w planerze',
+  'inspector.swapInputs': 'Zamień wejścia',
   'inspector.chestHint': 'Przyjmuje z każdej taśmy biegnącej do środka; wydaje na pozostałe sąsiednie taśmy. Przy ustawionych filtrach wydają tylko strony z filtrem (ten przedmiot); bez filtrów wydają wszystkie strony:',
   'inspector.outSide': 'Wyjście {side}',
   'chest.option.one': '{name} ({n} slot)',

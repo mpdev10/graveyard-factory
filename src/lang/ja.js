@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': '工場の一部なので、移動・回転・撤去はできません。出力先のマスは空けておくか、ベルトか地下コンベアのベルト部分（ギャップは不可）を、こちらへ向けずに置けます。',
   'inspector.lockedTitle': 'プランナーは固定した配置物を動かしません',
   'inspector.keepInPlanner': 'プランナーで維持',
+  'inspector.swapInputs': '入力を入れ替え',
   'inspector.chestHint': '内向きのどのベルトからも受け取り、隣接するそれ以外のベルトへ出力します。フィルターを設定した側面だけが（そのアイテムを）出力し、未設定なら全側面から出力します：',
   'inspector.outSide': '出力 {side}',
   'chest.option.other': '{name}（{n}スロット）',

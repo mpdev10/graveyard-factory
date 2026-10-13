@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': 'Forma parte de la fábrica: no se puede mover, girar ni quitar. La celda que alimenta puede quedar vacía o llevar una cinta o la celda de cinta de una subterránea (no su hueco), sin apuntar hacia él.',
   'inspector.lockedTitle': 'El planificador mantiene en su sitio las entidades bloqueadas',
   'inspector.keepInPlanner': 'mantener en el planificador',
+  'inspector.swapInputs': 'Intercambiar entradas',
   'inspector.chestHint': 'Recibe de cualquier cinta que apunte hacia él; saca a las demás cintas contiguas. Con filtros, solo sacan los lados filtrados (ese objeto); sin filtros, sacan todos los lados:',
   'inspector.outSide': 'Salida {side}',
   'chest.option.one': '{name} ({n} ranura)',

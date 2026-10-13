@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': '工厂的固定部分：不能移动、旋转或移除。它所连接的格子可以留空，也可放置传送带或地下传送带的传送带格（不含其间隙），且不能指向回它。',
   'inspector.lockedTitle': '规划器会保持已锁定的物件不动',
   'inspector.keepInPlanner': '在规划器中保留',
+  'inspector.swapInputs': '交换输入',
   'inspector.chestHint': '接收任何指向它的传送带送来的物品；向旁边的其他传送带输出。设置了过滤时，只有被过滤的侧面输出（该物品）；未设置时，所有侧面都输出：',
   'inspector.outSide': '{side}输出',
   'chest.option.other': '{name}（{n} 格）',

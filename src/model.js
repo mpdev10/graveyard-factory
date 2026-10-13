@@ -685,6 +685,7 @@ function normalizeEntity(e) {
     e.variant ??= defaultVariant(e.type);
     const needed = RECIPE_BY_ID[e.recipe]?.extension;
     e.extensions ??= needed ? [needed] : [];
+    if (!Array.isArray(e.inputs)) delete e.inputs;
     delete e.rot;
   } else if (e.kind === 'chest') {
     e.level ??= 1;

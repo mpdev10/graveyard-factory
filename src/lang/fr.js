@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': 'Fait partie de l\'usine : on ne peut ni le déplacer, ni le pivoter, ni le retirer. La case qu\'il alimente peut rester vide ou recevoir un tapis ou une case de tapis d\'un souterrain (pas son passage), sans pointer vers lui.',
   'inspector.lockedTitle': 'Le planificateur garde les éléments verrouillés en place',
   'inspector.keepInPlanner': 'garder dans le planificateur',
+  'inspector.swapInputs': 'Échanger les entrées',
   'inspector.chestHint': 'Reçoit de tout tapis qui pointe vers lui ; sort vers les autres tapis voisins. Avec des filtres, seuls les côtés filtrés sortent (cet objet) ; sans filtre, tous les côtés sortent :',
   'inspector.outSide': 'Sortie {side}',
   'chest.option.one': '{name} ({n} emplacement)',

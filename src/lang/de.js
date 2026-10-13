@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': 'Teil der Fabrik: Sie kann nicht verschoben, gedreht oder entfernt werden. Die Zelle, die sie speist, kann leer bleiben oder ein Band bzw. die Bandzelle eines unterirdischen Bands (nicht dessen Lücke) aufnehmen, die nicht zu ihr zurückzeigt.',
   'inspector.lockedTitle': 'Der Planer lässt gesperrte Objekte an ihrem Platz',
   'inspector.keepInPlanner': 'im Planer behalten',
+  'inspector.swapInputs': 'Eingänge tauschen',
   'inspector.chestHint': 'Nimmt von jedem hineinzeigenden Band an; gibt an die anderen Bänder daneben ab. Sind Filter gesetzt, geben nur die gefilterten Seiten (dieses Item) ab; ohne Filter jede Seite:',
   'inspector.outSide': 'Ausgang {side}',
   'chest.option.one': '{name} ({n} Platz)',
