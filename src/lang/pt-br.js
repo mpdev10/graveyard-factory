@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': 'Parte da fábrica: não pode ser movida, girada nem removida. A célula que ela alimenta pode ficar vazia ou receber uma esteira ou a célula de esteira de uma subterrânea (não o vão), sem apontar de volta para ela.',
   'inspector.lockedTitle': 'O planejador mantém as entidades travadas no lugar',
   'inspector.keepInPlanner': 'manter no planejador',
+  'inspector.swapInputs': 'Trocar entradas',
   'inspector.chestHint': 'Recebe de qualquer esteira que aponte para ele; envia para as outras esteiras ao lado. Com filtros definidos, só os lados filtrados enviam (esse item); sem filtros, todos os lados enviam:',
   'inspector.outSide': 'Saída {side}',
   'chest.option.one': '{name} ({n} espaço)',

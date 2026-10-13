@@ -144,6 +144,7 @@ export default {
   'inspector.fixedHint': 'Part of the factory: it can\'t be moved, turned or removed. The cell it feeds can stay empty or take a belt or an underground\'s belt cell (not its gap), not pointing back into it.',
   'inspector.lockedTitle': 'The planner keeps locked entities in place',
   'inspector.keepInPlanner': 'keep in planner',
+  'inspector.swapInputs': 'Swap inputs',
   'inspector.chestHint': 'Receives from any belt pointing in; outputs to the other belts next to it. With filters set, only filtered sides output (that item); with none, every side does:',
   'inspector.outSide': 'Out {side}',
   'chest.option.one': '{name} ({n} slot)',

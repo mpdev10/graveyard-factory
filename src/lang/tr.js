@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': 'Fabrikanın parçası: taşınamaz, döndürülemez ya da kaldırılamaz. Beslediği hücre boş kalabilir ya da içeri bakmayan bir bant veya yeraltı konveyörünün bant hücresi (boşluğu değil) olabilir.',
   'inspector.lockedTitle': 'Planlayıcı kilitli nesneleri yerinde tutar',
   'inspector.keepInPlanner': 'planlayıcıda koru',
+  'inspector.swapInputs': 'Girdileri değiştir',
   'inspector.chestHint': 'İçeri bakan her banttan alır; yanındaki diğer bantlara çıktı verir. Filtre ayarlıysa yalnızca filtreli yanlar (o öğeyi) verir; hiç yoksa her yan verir:',
   'inspector.outSide': 'Çıkış {side}',
   'chest.option.one': '{name} ({n} yuva)',

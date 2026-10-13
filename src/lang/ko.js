@@ -142,6 +142,7 @@ export default {
   'inspector.fixedHint': '공장의 일부라서 이동, 회전, 제거할 수 없습니다. 이것이 공급하는 칸은 비워 두거나 벨트 또는 지하 컨베이어의 벨트 칸(빈틈 칸 제외)을 놓을 수 있으며, 이쪽을 향하면 안 됩니다.',
   'inspector.lockedTitle': '플래너는 고정된 개체를 제자리에 둡니다',
   'inspector.keepInPlanner': '플래너에서 유지',
+  'inspector.swapInputs': '입력 바꾸기',
   'inspector.chestHint': '안쪽을 향한 모든 벨트에서 받고, 옆의 다른 벨트로 내보냅니다. 필터를 설정하면 필터가 있는 쪽만 (해당 아이템을) 내보내고, 설정이 없으면 모든 쪽에서 내보냅니다:',
   'inspector.outSide': '출력 {side}',
   'chest.option.other': '{name} (슬롯 {n}개)',

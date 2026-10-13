@@ -933,9 +933,15 @@ export class Editor {
         field(t('field.level'), levelSelect(e.type, e.level, (v) => set(stationEntityPatch(e, { level: v })))),
         field(t('field.layout'), variantSelect(e.type, e.variant, (v) => set({ variant: v }))),
         field(t('field.recipe'), recipeSelect(e.type, e.level, e.recipe ?? '',
-          (v) => set({ recipe: v || null, extensions: withRequired(e.extensions, v) }))),
+          (v) => set({ recipe: v || null, extensions: withRequired(e.extensions, v), inputs: undefined }))),
       );
-      if (RECIPE_BY_ID[e.recipe]) el.append(recipeInfo(e.type, RECIPE_BY_ID[e.recipe]));
+      const recipe = RECIPE_BY_ID[e.recipe];
+      if (recipe) el.append(recipeInfo(e.type, recipe));
+      if (recipe && Object.keys(recipe.inputs).length === 2) {
+        const swap = h('button', { type: 'button' }, t('inspector.swapInputs'));
+        swap.addEventListener('click', () => set({ inputs: swappedInputs(e, recipe) }));
+        el.append(h('div', { class: 'row-actions' }, swap));
+      }
       el.append(field(t('field.extensions'), extensionButtons(e.type, e.extensions, e.recipe, (list) => set({ extensions: list }))));
     }
     if (e.kind === 'chest') this.renderChestFields(el, e, set);
@@ -1144,7 +1150,15 @@ function stationPatch(opts, change) {
 /** @param {Entity} e @param {StationChange} change @returns {Partial<Entity>} */
 function stationEntityPatch(e, change) {
   const p = stationPatch({ stationType: e.type, level: e.level, variant: e.variant, extensions: e.extensions, recipe: e.recipe }, change);
-  return { type: p.stationType, level: p.level, variant: p.variant, extensions: p.extensions, recipe: p.recipe || null };
+  return { type: p.stationType, level: p.level, variant: p.variant, extensions: p.extensions, recipe: p.recipe || null, inputs: undefined };
+}
+
+// The other port assignment of a two-ingredient station: each input takes the
+// ingredient the other one has now (recipe order unless `inputs` says otherwise).
+/** @param {Entity} e @param {Recipe} recipe @returns {string[]} */
+function swappedInputs(e, recipe) {
+  const now = Array.isArray(e.inputs) ? e.inputs : Object.keys(recipe.inputs);
+  return [now[1], now[0]];
 }
 
 // Toggle an extension: it replaces whatever sits in its slot, or comes off again.
