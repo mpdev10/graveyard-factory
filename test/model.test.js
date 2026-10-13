@@ -493,22 +493,22 @@ test('factory power: 1 per station and belt, 2 per underground, none for chests'
   assert.equal(l.power(), 5);
 });
 
-test('power supply: 5 fixed carousels, 20 zombies, 7 power each (10 with Belt Master)', async () => {
+test('power supply: 5 fixed carousels, 20 zombies, 10 power each (20 with Belt Master)', async () => {
   const { powerSupply } = await import('../src/model.js');
-  assert.deepEqual(powerSupply(140, false), { used: 140, perZombie: 7, carousels: 5, maxZombies: 20, available: 140, zombies: 20, over: 0 });
-  assert.equal(powerSupply(141, false).over, 1);
-  assert.equal(powerSupply(141, false).zombies, 21);
-  assert.equal(powerSupply(200, true).over, 0);
-  assert.equal(powerSupply(205, true).over, 5);
+  assert.deepEqual(powerSupply(200, false), { used: 200, perZombie: 10, carousels: 5, maxZombies: 20, available: 200, zombies: 20, over: 0 });
+  assert.equal(powerSupply(201, false).over, 1);
+  assert.equal(powerSupply(201, false).zombies, 21);
+  assert.equal(powerSupply(400, true).over, 0);
+  assert.equal(powerSupply(405, true).over, 5);
 });
 
 test('power over the maximum is a warning', () => {
   const l = Layout.blank(50, 5);
-  for (let x = 0; x < 50; x++) for (let y = 0; y < 3; y++) l.add({ kind: 'belt', x, y, rot: E }); // 150 power
+  for (let x = 0; x < 50; x++) for (let y = 0; y < 5; y++) l.add({ kind: 'belt', x, y, rot: E }); // 250 power
   const warn = () => l.validate().filter((i) => i.severity === 'warning' && /over the factory/.test(i.message));
-  assert.match(warn()[0].message, /Power 150 is over the factory's 140 \(20 zombies on 5 carousels\): 10 too many/);
+  assert.match(warn()[0].message, /Power 250 is over the factory's 200 \(20 zombies on 5 carousels\): 50 too many/);
   l.beltMaster = true;
-  assert.equal(warn().length, 0); // 200 with Belt Master
+  assert.equal(warn().length, 0); // 400 with Belt Master
 });
 
 test('placed zombie carousels from older files are dropped (the factory\'s are fixed)', () => {
