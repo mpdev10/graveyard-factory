@@ -193,7 +193,7 @@ test('planner: Supply: Iron on the real factory floor routes everything', () => 
   assert.deepEqual(layoutIssues(out), []);
   assert.equal(res.stats.stations, 9);
   // At 1 craft per minute per recipe this needs more power than the factory has.
-  assert.ok(res.stats.power > 140 && res.stats.over === res.stats.power - 140 && res.stats.available === 140, JSON.stringify(res.stats));
+  assert.ok(res.stats.power > 200 && res.stats.over === res.stats.power - 200 && res.stats.available === 200, JSON.stringify(res.stats));
 });
 
 test('planner: plans on the fully repaired floor validate', () => {

@@ -528,9 +528,9 @@ export const POWER_ICON = 'assets/ui/power.webp';
 
 // Power comes from zombies on the factory's zombie carousels. They're fixed
 // (outside the floor plan, none can be built), 5 of them with 4 zombies each, so
-// at most 20 zombies: 140 power, or 200 with the Belt Master perk (confirmed by
-// the user).
-export const ZOMBIE_POWER = { perZombie: 7, perZombieBeltMaster: 10, zombiesPerCarousel: 4, carousels: 5 };
+// at most 20 zombies: 200 power, or 400 with the Belt Master perk (confirmed by
+// the user; game version 1.010 raised it from 7 and 10 per zombie).
+export const ZOMBIE_POWER = { perZombie: 10, perZombieBeltMaster: 20, zombiesPerCarousel: 4, carousels: 5 };
 export const BELT_MASTER_ICON = 'assets/ui/perk_beltmaster.webp';
 
 // The factory floor is the game's `conveyor` world zone, made of ten build areas
